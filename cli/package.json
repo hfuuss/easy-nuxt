@@ -1,0 +1,57 @@
+{
+  "name": "easy-nuxt",
+  "description": "简易版nuxtjs",
+  "version": "0.0.1",
+  "author": "lippzhang",
+  "bin": {
+    "easy-nuxt": "./bin/run"
+  },
+  "bugs": "https://github.com/easy-nuxt/easy-nuxt/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "chokidar": "^3.5.1",
+    "consola": "^2.15.3",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.7",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "globby": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/easy-nuxt/easy-nuxt",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "easy-nuxt",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "easy-nuxt/easy-nuxt",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
